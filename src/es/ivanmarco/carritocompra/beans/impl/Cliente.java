@@ -3,28 +3,30 @@ package es.ivanmarco.carritocompra.beans.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Clientes {
+public class Cliente {
 
 
-	private int id;
+	private String dni;
 	private String nombre;
 	private String apellidos;
 	private String direccion;
 	private String telefono;
-	// String de tipo Compra; 
-	//private List<Compra> Compra;
+
+	
 
 	public String getNombre() {
 		return nombre;
 	}
-	public Clientes(int id, String nombre, String apellidos, String direccion, String telefono) {
+	
+	public Cliente(String dni, String nombre, String apellidos, String direccion, String telefono) {
 		super();
-		this.id = id;
+		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.direccion = direccion;
 		this.telefono = telefono;
 	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -36,7 +38,7 @@ public class Clientes {
 	}
 	@Override
 	public String toString() {
-		return "Clientes [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", direccion=" + direccion
+		return "Clientes [id=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", direccion=" + direccion
 				+ ", telefono=" + telefono + "]";
 	}
 	public String getDireccion() {
@@ -51,11 +53,16 @@ public class Clientes {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	public int getId() {
-		return id;
+
+	public String getDni() {
+		return dni;
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
+
+
+
 
 }

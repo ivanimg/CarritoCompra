@@ -5,15 +5,7 @@ import java.util.Arrays;
 public class Producto {
 	private String nombre;
 	private String descripcion;
-	private String[] categoria = {"Alimentación", "Perfumería", "Limpieza"};
-	public int getCategoriaNum() {
-		return categoriaNum;
-	}
-	public void setCategoriaNum(int categoriaNum) {
-		this.categoriaNum = categoriaNum;
-	}
-
-	private int categoriaNum;
+	private String categoria;
 	private double precio;
 	private int stock;
 	
@@ -21,7 +13,8 @@ public class Producto {
 	{
 		
 	}	
-	public Producto(String nombre, String descripcion, int categoriaNum, double precio, int stock) {
+
+	public Producto(String nombre, String descripcion, String categoria, double precio, int stock) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -29,7 +22,6 @@ public class Producto {
 		this.precio = precio;
 		this.stock = stock;
 	}
-	
 	public String getNombre() {
 		return nombre;
 	}
@@ -42,12 +34,15 @@ public class Producto {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public String[] getCategoria() {
+
+	public String getCategoria() {
 		return categoria;
 	}
-	public void setCategoria(String[] categoria) {
+
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+
 	public double getPrecio() {
 		return precio;
 	}
@@ -61,11 +56,13 @@ public class Producto {
 		this.stock = stock;
 	}
 
+	
 	@Override
 	public String toString() {
-		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", categoria="
-				+ Arrays.toString(categoria) + ", categoriaNum=" + categoriaNum + ", precio=" + precio + ", stock="
-				+ stock + "]";
+		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria + ", precio="
+				+ precio + ", stock=" + stock + "]";
 	}
+
+
 
 }
